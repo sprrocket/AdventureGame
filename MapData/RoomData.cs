@@ -15,7 +15,7 @@ namespace MapData
      */
 
     /// <summary>
-    /// This string literal will hold all of the information needed for the rooms in the training simulator.
+    /// The string literal in this class will hold all of the information needed for the rooms in the training simulator.
     /// This may be moved to an external file at a later sprint.
     /// We'll be using RegEx, so keep the formatting exact! This includes whitespace in the IDE.
     /// Numbers are formatted as row,column

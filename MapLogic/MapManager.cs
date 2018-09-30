@@ -10,7 +10,7 @@ using MapData;
 namespace MapLogic
 {
     /// <summary>
-    /// Getters 'n Setters for the Map Manager
+    /// Getters and Setters for the Map Manager
     /// </summary>
     public partial class MapManager
     {

@@ -17,7 +17,7 @@ namespace MapLogic
         /// <param name="oldRoom"></param>
         /// <param name="dir"></param>
         /// <returns></returns>
-        private static LocationUpdateHelper RoomUpdater(Room newRoom, Room oldRoom, char dir)
+        private static LocationUpdateHelper MoveManager(Room newRoom, Room oldRoom, char dir)
         {
             if (newRoom != null && newRoom.Blocked != true)//if the newRoom is null, it's out of bounds
             {
@@ -47,13 +47,13 @@ namespace MapLogic
             switch (ButtonName)
             {
                 case "northBtn":
-                    return RoomUpdater(r.North, r, 'N');
+                    return MoveManager(r.North, r, 'N');
                 case "southBtn":
-                    return RoomUpdater(r.South, r, 'S');
+                    return MoveManager(r.South, r, 'S');
                 case "eastBtn":
-                    return RoomUpdater(r.East, r, 'E');
+                    return MoveManager(r.East, r, 'E');
                 case "westBtn":
-                    return RoomUpdater(r.West, r, 'W');
+                    return MoveManager(r.West, r, 'W');
                 default:
                     throw (new InvalidOperationException("Invalid button event"));
             }

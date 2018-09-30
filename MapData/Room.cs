@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace MapData
 {
+    /// <summary>
+    /// Data struct for each room
+    /// </summary>
     public partial class Room
     {
         /// <summary>
