@@ -12,7 +12,7 @@ namespace MapLogic
     public class MapLoader
     {
         /// <summary>
-        /// Attaches the information from Data.RoomData to the map
+        /// Attaches the information from Data to the map
         /// </summary>
         /// <param name="match"></param>
         /// <param name="activeMap"></param>
