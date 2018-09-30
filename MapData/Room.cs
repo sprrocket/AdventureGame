@@ -4,11 +4,12 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MapData
+namespace GameData
 {
     /// <summary>
     /// Data struct for each room
     /// </summary>
+    [Serializable]
     public partial class Room
     {
         /// <summary>

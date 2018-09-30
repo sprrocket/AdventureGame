@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MapLogic;
+using GameLogic;
 
 namespace DesktopApplication
 {
@@ -69,6 +69,11 @@ namespace DesktopApplication
                 form.eastBtn.Enabled = false; form.northBtn.Enabled = false; form.southBtn.Enabled = false; form.westBtn.Enabled = false;
                 form.eastBtn.Visible = false; form.northBtn.Visible = false; form.southBtn.Visible = false; form.westBtn.Visible = false;
             }
+        }
+
+        public static void RefreshDisplayCompletely()
+        {
+            form.buttonArray.Initialize();
         }
 
         /// <summary>

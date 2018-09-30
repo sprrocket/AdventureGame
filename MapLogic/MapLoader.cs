@@ -5,9 +5,9 @@ using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
-using MapData;
+using GameData;
 
-namespace MapLogic
+namespace GameLogic
 {
     public class MapLoader
     {
@@ -68,7 +68,7 @@ namespace MapLogic
         /// </summary>
         public static void SetupGameData()
         {
-            LoadMapData(GameData.ActiveMap);
+            LoadMapData(GameData.GameData.ActiveMap);
         }
     }
 }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace PlayerData
 {
+    [Serializable]
     public class PlayerEntity
     {
         public int CurrentRow { get; set; }

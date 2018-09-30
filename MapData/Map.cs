@@ -5,11 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace MapData
+namespace GameData
 {
     /// <summary>
     /// Acts as a virtual layout for the Rooms.
     /// </summary>
+    [Serializable]
     public class Map
     {
         private Room[,] roomGrid = new Room[RoomData.RowsOfRooms, RoomData.ColumnsOfRooms];
@@ -53,6 +54,6 @@ namespace MapData
             else return null;
         }
 
-        public Room[,] RoomGrid { get { return roomGrid; } }
+        public Room[,] RoomGrid { get { return roomGrid; } set { roomGrid = value; } }
     }
 }

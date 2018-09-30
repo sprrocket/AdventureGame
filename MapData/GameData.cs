@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MapData
+namespace GameData
 {
     /// <summary>
     /// Holds the actively used information during runtime for the interactive map
@@ -18,7 +18,7 @@ namespace MapData
         public static bool PlayerInBattle { get; set; }
         public static bool GameOver { get; set; }
         public static bool GameEnd { get; set; }
-        public static Map ActiveMap { get { return activeMap; } }
+        public static Map ActiveMap { get { return activeMap; } set { activeMap = value; } }
         public static Room[,] RoomGrid { get { return roomGrid; } }
         public static Room CurrentRoom { get { return currentRoom; } set { currentRoom = value; } }
     }

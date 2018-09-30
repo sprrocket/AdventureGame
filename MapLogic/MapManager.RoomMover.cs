@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MapData;
+using GameData;
 
-namespace MapLogic
+namespace GameLogic
 {
     public partial class MapManager
     {
@@ -49,7 +49,7 @@ namespace MapLogic
         /// </summary>
         public static LocationUpdateHelper AttemptMove(string ButtonName)
         {
-            Room r = GameData.CurrentRoom;
+            Room r = GameData.GameData.CurrentRoom;
             switch (ButtonName)
             {
                 case "northBtn":

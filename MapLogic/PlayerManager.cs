@@ -1,7 +1,7 @@
-﻿using MapData;
+﻿using GameData;
 using PlayerData;
 
-namespace MapLogic
+namespace GameLogic
 {
     public class PlayerManager
     {
@@ -18,8 +18,8 @@ namespace MapLogic
         public static void LoadPlayerData()
         {
             PlayerOne.Healthpoints = 100;
-            PlayerOne.CurrentRow = GameData.CurrentRoom.Row;
-            PlayerOne.CurrentCol = GameData.CurrentRoom.Column;
+            PlayerOne.CurrentRow = GameData.GameData.CurrentRoom.Row;
+            PlayerOne.CurrentCol = GameData.GameData.CurrentRoom.Column;
 
             NPC.Healthpoints = 100;
         }
@@ -34,17 +34,22 @@ namespace MapLogic
             return "Player Health: " + PlayerOne.Healthpoints + "\tNPC Health: " + NPC.Healthpoints;
         }
 
+        public PlayerEntity PackagePlayer()
+        {
+            return PlayerOne;
+        } 
+
         public static void StartBattle()
         {
-            GameData.PlayerInBattle = true;
+            GameData.GameData.PlayerInBattle = true;
         }
 
         public static void BattleTurn()
         {
             PlayerOne.Healthpoints = PlayerOne.Healthpoints - rng.Next(0, 10);
             NPC.Healthpoints = NPC.Healthpoints-rng.Next(0, 10);
-            if (PlayerOne.Healthpoints <= 0) { GameData.PlayerInBattle = false; GameData.GameOver = true; MapManager.CurrentRoomDescription = "Game Over! Try again!"; }
-            else if (NPC.Healthpoints <= 0) { GameData.PlayerInBattle = false; GameData.GameEnd = true; MapManager.CurrentRoomDescription = "You Win! Thanks for playing!"; }
+            if (PlayerOne.Healthpoints <= 0) { GameData.GameData.PlayerInBattle = false; GameData.GameData.GameOver = true; MapManager.CurrentRoomDescription = "Game Over! Try again!"; }
+            else if (NPC.Healthpoints <= 0) { GameData.GameData.PlayerInBattle = false; GameData.GameData.GameEnd = true; MapManager.CurrentRoomDescription = "You Win! Thanks for playing!"; }
             else { MapManager.CurrentRoomDescription = BattleMessage(); }
         }
     }
