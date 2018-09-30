@@ -42,6 +42,8 @@ namespace DesktopApplication
             this.westBtn = new System.Windows.Forms.Button();
             this.FightButton = new System.Windows.Forms.Button();
             this.northBtn = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStrip2 = new System.Windows.Forms.MenuStrip();
             this.SuspendLayout();
             // 
             // mapPanel
@@ -186,6 +188,22 @@ namespace DesktopApplication
             this.northBtn.UseVisualStyleBackColor = true;
             this.northBtn.Click += new System.EventHandler(this.DirButtonClick);
             // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Location = new System.Drawing.Point(0, 24);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(766, 24);
+            this.menuStrip1.TabIndex = 6;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // menuStrip2
+            // 
+            this.menuStrip2.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip2.Name = "menuStrip2";
+            this.menuStrip2.Size = new System.Drawing.Size(766, 24);
+            this.menuStrip2.TabIndex = 7;
+            this.menuStrip2.Text = "menuStrip2";
+            // 
             // DesktopApplicationForm
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
@@ -202,10 +220,13 @@ namespace DesktopApplication
             this.Controls.Add(this.northBtn);
             this.Controls.Add(this.descriptionBox);
             this.Controls.Add(this.mapPanel);
+            this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.menuStrip2);
+            this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
             this.Name = "DesktopApplicationForm";
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
-            this.Text = "chrome";
+            this.Text = "AdventureGame";
             this.Load += new System.EventHandler(this.DesktopApplicationForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -226,6 +247,8 @@ namespace DesktopApplication
         public Button button1;
         private Label label2;
         public Button FightButton;
+        private MenuStrip menuStrip1;
+        private MenuStrip menuStrip2;
     }
 }
 

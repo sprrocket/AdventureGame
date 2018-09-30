@@ -43,7 +43,7 @@ namespace MapLogic
         {
             PlayerOne.Healthpoints = PlayerOne.Healthpoints - rng.Next(0, 10);
             NPC.Healthpoints = NPC.Healthpoints-rng.Next(0, 10);
-            if (PlayerOne.Healthpoints <= 0) { GameData.PlayerInBattle = false; GameData.GameOver = true; MapManager.CurrentRoomDescription = "Game Over!"; }
+            if (PlayerOne.Healthpoints <= 0) { GameData.PlayerInBattle = false; GameData.GameOver = true; MapManager.CurrentRoomDescription = "Game Over! Try again!"; }
             else if (NPC.Healthpoints <= 0) { GameData.PlayerInBattle = false; GameData.GameEnd = true; MapManager.CurrentRoomDescription = "You Win! Thanks for playing!"; }
             else { MapManager.CurrentRoomDescription = BattleMessage(); }
         }
