@@ -90,10 +90,13 @@
     <None Include="Resources\arrow.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\MapLogic\MapLogic.csproj">
+    <ProjectReference Include="..\MapLogic\GameLogic.csproj">
       <Project>{d7d0d7b8-20bf-4ea4-9b4a-25ee73b486f0}</Project>
-      <Name>MapLogic</Name>
+      <Name>GameLogic</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\swords.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -9,9 +9,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Logic", "Logic", "{5165F7DD
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Data", "Data", "{60CF8BA7-9879-476C-8336-9B60C2D4C9B8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapLogic", "MapLogic\MapLogic.csproj", "{D7D0D7B8-20BF-4EA4-9B4A-25EE73B486F0}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameLogic", "MapLogic\GameLogic.csproj", "{D7D0D7B8-20BF-4EA4-9B4A-25EE73B486F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MapData", "MapData\MapData.csproj", "{F6BE3985-E177-4D22-86C7-B9FFBB997E00}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameData", "MapData\GameData.csproj", "{F6BE3985-E177-4D22-86C7-B9FFBB997E00}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DesktopApplication", "DesktopApplication\DesktopApplication.csproj", "{00DCD8A1-B41F-423F-8286-C72215C8E26D}"
 EndProject

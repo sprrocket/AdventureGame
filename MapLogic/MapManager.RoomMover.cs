@@ -23,6 +23,12 @@ namespace MapLogic
             {
                 SetCurrentRoom(newRoom);
                 newRoom.Discovered = true;
+                PlayerManager.SetPlayerLocation(newRoom.Row, newRoom.Column);
+                if (newRoom.HasNPC)
+                {
+                    PlayerInBattle = true;
+                    newRoom.Description = "An NPC has appeared!";
+                }
                 return new LocationUpdateHelper(false);
             }
             else if (newRoom ==null){ return new LocationUpdateHelper(false);}//if it's out of bounds, it's not a blocked room

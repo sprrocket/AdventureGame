@@ -15,6 +15,9 @@ namespace MapData
         private static Room[,] roomGrid = activeMap.RoomGrid;
         private static Room currentRoom = roomGrid[3, 1];//3,1 is where the player begins
 
+        public static bool PlayerInBattle { get; set; }
+        public static bool GameOver { get; set; }
+        public static bool GameEnd { get; set; }
         public static Map ActiveMap { get { return activeMap; } }
         public static Room[,] RoomGrid { get { return roomGrid; } }
         public static Room CurrentRoom { get { return currentRoom; } set { currentRoom = value; } }

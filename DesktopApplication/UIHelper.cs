@@ -57,10 +57,18 @@ namespace DesktopApplication
         /// </summary>
         public static void RefreshDisplay()
         {
+            form.FightButton.Visible = MapManager.PlayerInBattle;
+            form.FightButton.Enabled = MapManager.PlayerInBattle;
+            
             form.roomNameLabel.Text = MapManager.CurrentRoomName;
             form.descriptionBox.Text = MapManager.CurrentRoomDescription;
             form.buttonArray[MapManager.CurrentRow, MapManager.CurrentColumn].BackgroundImage = Properties.Resources.star1;
             if (MapManager.CurrentIsDiscovered) form.buttonArray[MapManager.CurrentRow, MapManager.CurrentColumn].BackColor = System.Drawing.Color.Gray;
+            if (MapManager.PlayerInBattle)
+            {
+                form.eastBtn.Enabled = false; form.northBtn.Enabled = false; form.southBtn.Enabled = false; form.westBtn.Enabled = false;
+                form.eastBtn.Visible = false; form.northBtn.Visible = false; form.southBtn.Visible = false; form.westBtn.Visible = false;
+            }
         }
 
         /// <summary>
@@ -76,6 +84,12 @@ namespace DesktopApplication
             {
                 form.buttonArray[a.Row, a.Column].BackgroundImage = Properties.Resources.X;
             }
+            RefreshDisplay();
+        }
+
+        public static void FightButtonClick(object sender, EventArgs e)
+        {
+            PlayerManager.BattleTurn();
             RefreshDisplay();
         }
     }

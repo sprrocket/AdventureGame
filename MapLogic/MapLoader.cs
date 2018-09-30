@@ -24,6 +24,7 @@ namespace MapLogic
             activeMap.RoomGrid[row, col].Column = col;
             activeMap.RoomGrid[row, col].Name = match.Groups[3].Value;
             activeMap.RoomGrid[row, col].Description = match.Groups[4].Value;
+            activeMap.RoomGrid[row, col].HasNPC = Boolean.Parse(match.Groups[5].Value);
         }
         private static void ParseBlockedRooms(Map activeMap)
         {

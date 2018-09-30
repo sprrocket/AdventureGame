@@ -27,5 +27,9 @@ namespace DesktopApplication
         {
             UIHelper.DirButtonClick(sender, e);
         }
+        private void FightButtonClick(object sender, System.EventArgs e)
+        {
+            UIHelper.FightButtonClick(sender, e);
+        }
     }
 }

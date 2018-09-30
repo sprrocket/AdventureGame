@@ -23,6 +23,7 @@ namespace MapData
         private int col;
         private bool discovered = false;
         private bool blocked = false;
+        private bool hasNPC = false;
         private String name = null;
         private String description = null;
 

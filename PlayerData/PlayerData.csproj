@@ -4,13 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{D7D0D7B8-20BF-4EA4-9B4A-25EE73B486F0}</ProjectGuid>
+    <ProjectGuid>{A9EB3EE3-4FEA-4F25-85B1-9728B563D354}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>MapLogic</RootNamespace>
-    <AssemblyName>MapLogic</AssemblyName>
+    <RootNamespace>PlayerData</RootNamespace>
+    <AssemblyName>PlayerData</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -32,7 +33,6 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -41,17 +41,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="LocationUpdateHelper.cs" />
-    <Compile Include="MapLoader.cs" />
-    <Compile Include="MapManager.cs" />
+    <Compile Include="PlayableCharacter.cs" />
+    <Compile Include="PlayerEntity.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="MapManager.RoomMover.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\MapData\MapData.csproj">
-      <Project>{f6be3985-e177-4d22-86c7-b9ffbb997e00}</Project>
-      <Name>MapData</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

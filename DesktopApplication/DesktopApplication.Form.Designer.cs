@@ -32,15 +32,16 @@ namespace DesktopApplication
         {
             this.mapPanel = new System.Windows.Forms.TableLayoutPanel();
             this.descriptionBox = new System.Windows.Forms.RichTextBox();
-            this.northBtn = new System.Windows.Forms.Button();
-            this.westBtn = new System.Windows.Forms.Button();
-            this.eastBtn = new System.Windows.Forms.Button();
-            this.southBtn = new System.Windows.Forms.Button();
             this.roomNameLabel = new System.Windows.Forms.Label();
             this.legendBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
+            this.eastBtn = new System.Windows.Forms.Button();
+            this.southBtn = new System.Windows.Forms.Button();
+            this.westBtn = new System.Windows.Forms.Button();
+            this.FightButton = new System.Windows.Forms.Button();
+            this.northBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // mapPanel
@@ -69,58 +70,6 @@ namespace DesktopApplication
             this.descriptionBox.TabIndex = 1;
             this.descriptionBox.TabStop = false;
             this.descriptionBox.Text = "";
-            // 
-            // northBtn
-            // 
-            this.northBtn.BackgroundImage = global::DesktopApplication.Properties.Resources.arrow;
-            this.northBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.northBtn.Location = new System.Drawing.Point(574, 294);
-            this.northBtn.Name = "northBtn";
-            this.northBtn.Size = new System.Drawing.Size(70, 70);
-            this.northBtn.TabIndex = 2;
-            this.northBtn.TabStop = false;
-            this.northBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.northBtn.UseVisualStyleBackColor = true;
-            this.northBtn.Click += new System.EventHandler(this.DirButtonClick);
-            // 
-            // westBtn
-            // 
-            this.westBtn.BackgroundImage = global::DesktopApplication.Properties.Resources.arrow;
-            this.westBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.westBtn.Location = new System.Drawing.Point(498, 370);
-            this.westBtn.Name = "westBtn";
-            this.westBtn.Size = new System.Drawing.Size(70, 70);
-            this.westBtn.TabIndex = 2;
-            this.westBtn.TabStop = false;
-            this.westBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.westBtn.UseVisualStyleBackColor = true;
-            this.westBtn.Click += new System.EventHandler(this.DirButtonClick);
-            // 
-            // eastBtn
-            // 
-            this.eastBtn.BackgroundImage = global::DesktopApplication.Properties.Resources.arrow;
-            this.eastBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.eastBtn.Location = new System.Drawing.Point(650, 370);
-            this.eastBtn.Name = "eastBtn";
-            this.eastBtn.Size = new System.Drawing.Size(70, 70);
-            this.eastBtn.TabIndex = 2;
-            this.eastBtn.TabStop = false;
-            this.eastBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.eastBtn.UseVisualStyleBackColor = true;
-            this.eastBtn.Click += new System.EventHandler(this.DirButtonClick);
-            // 
-            // southBtn
-            // 
-            this.southBtn.BackgroundImage = global::DesktopApplication.Properties.Resources.arrow;
-            this.southBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.southBtn.Location = new System.Drawing.Point(574, 446);
-            this.southBtn.Name = "southBtn";
-            this.southBtn.Size = new System.Drawing.Size(70, 70);
-            this.southBtn.TabIndex = 2;
-            this.southBtn.TabStop = false;
-            this.southBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.southBtn.UseVisualStyleBackColor = true;
-            this.southBtn.Click += new System.EventHandler(this.DirButtonClick);
             // 
             // roomNameLabel
             // 
@@ -151,6 +100,15 @@ namespace DesktopApplication
             this.label1.TabIndex = 5;
             this.label1.Text = "= Visited";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(474, 519);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(55, 13);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "= Blocked";
+            // 
             // button1
             // 
             this.button1.BackgroundImage = global::DesktopApplication.Properties.Resources.X;
@@ -162,14 +120,71 @@ namespace DesktopApplication
             this.button1.TabIndex = 4;
             this.button1.UseVisualStyleBackColor = false;
             // 
-            // label2
+            // eastBtn
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(474, 519);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(55, 13);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "= Blocked";
+            this.eastBtn.BackgroundImage = global::DesktopApplication.Properties.Resources.arrow;
+            this.eastBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.eastBtn.Location = new System.Drawing.Point(650, 370);
+            this.eastBtn.Name = "eastBtn";
+            this.eastBtn.Size = new System.Drawing.Size(70, 70);
+            this.eastBtn.TabIndex = 2;
+            this.eastBtn.TabStop = false;
+            this.eastBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.eastBtn.UseVisualStyleBackColor = true;
+            this.eastBtn.Click += new System.EventHandler(this.DirButtonClick);
+            // 
+            // southBtn
+            // 
+            this.southBtn.BackgroundImage = global::DesktopApplication.Properties.Resources.arrow;
+            this.southBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.southBtn.Location = new System.Drawing.Point(574, 446);
+            this.southBtn.Name = "southBtn";
+            this.southBtn.Size = new System.Drawing.Size(70, 70);
+            this.southBtn.TabIndex = 2;
+            this.southBtn.TabStop = false;
+            this.southBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.southBtn.UseVisualStyleBackColor = true;
+            this.southBtn.Click += new System.EventHandler(this.DirButtonClick);
+            // 
+            // westBtn
+            // 
+            this.westBtn.BackgroundImage = global::DesktopApplication.Properties.Resources.arrow;
+            this.westBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.westBtn.Location = new System.Drawing.Point(498, 370);
+            this.westBtn.Name = "westBtn";
+            this.westBtn.Size = new System.Drawing.Size(70, 70);
+            this.westBtn.TabIndex = 2;
+            this.westBtn.TabStop = false;
+            this.westBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.westBtn.UseVisualStyleBackColor = true;
+            this.westBtn.Click += new System.EventHandler(this.DirButtonClick);
+            // 
+            // FightButton
+            // 
+            this.FightButton.BackgroundImage = global::DesktopApplication.Properties.Resources.swords;
+            this.FightButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.FightButton.Enabled = false;
+            this.FightButton.Location = new System.Drawing.Point(574, 370);
+            this.FightButton.Name = "FightButton";
+            this.FightButton.Size = new System.Drawing.Size(70, 70);
+            this.FightButton.TabIndex = 2;
+            this.FightButton.TabStop = false;
+            this.FightButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.FightButton.UseVisualStyleBackColor = true;
+            this.FightButton.Click += new System.EventHandler(this.FightButtonClick);
+            // 
+            // northBtn
+            // 
+            this.northBtn.BackgroundImage = global::DesktopApplication.Properties.Resources.arrow;
+            this.northBtn.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.northBtn.Location = new System.Drawing.Point(574, 294);
+            this.northBtn.Name = "northBtn";
+            this.northBtn.Size = new System.Drawing.Size(70, 70);
+            this.northBtn.TabIndex = 2;
+            this.northBtn.TabStop = false;
+            this.northBtn.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.northBtn.UseVisualStyleBackColor = true;
+            this.northBtn.Click += new System.EventHandler(this.DirButtonClick);
             // 
             // DesktopApplicationForm
             // 
@@ -183,6 +198,7 @@ namespace DesktopApplication
             this.Controls.Add(this.eastBtn);
             this.Controls.Add(this.southBtn);
             this.Controls.Add(this.westBtn);
+            this.Controls.Add(this.FightButton);
             this.Controls.Add(this.northBtn);
             this.Controls.Add(this.descriptionBox);
             this.Controls.Add(this.mapPanel);
@@ -209,6 +225,7 @@ namespace DesktopApplication
         private Label label1;
         public Button button1;
         private Label label2;
+        public Button FightButton;
     }
 }
 
